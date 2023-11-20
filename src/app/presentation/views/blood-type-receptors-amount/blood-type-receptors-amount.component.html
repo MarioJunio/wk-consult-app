@@ -1,0 +1,15 @@
+<h1 class="title">Quantidade de receptores por tipo sanguineo</h1>
+<table mat-table [dataSource]="datasource" class="mat-elevation-z8">
+  <ng-container matColumnDef="bloodType">
+    <th mat-header-cell *matHeaderCellDef>Tipo sanguíneo</th>
+    <td mat-cell *matCellDef="let element">{{ element.bloodType }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="amountReceptors">
+    <th mat-header-cell *matHeaderCellDef>Quantidade receptores</th>
+    <td mat-cell *matCellDef="let element">{{ element.amountReceptors }}</td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>

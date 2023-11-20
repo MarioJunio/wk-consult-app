@@ -1,27 +1,46 @@
-# WkConsultApp
+# WK Consultas
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.1.
+Aplicação em angular que tem como objetivo exibir os dados para consulta de pessoas do banco de sangue.
 
-## Development server
+## Rodando a aplicação
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Pré requisitos:
+```text
+* Node
+* Docker
+* Angular CLI
+```
 
-## Code scaffolding
+## Desenvolvimento
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Para instalar o Angular CLI execute o comando abaixo:
+``` npm install -g @angular/cli ```
+
+Para rodar a aplicação em modo de desenvolvimento basta navegar até a raiz do diretório e rodar o seguinte comando:
+
+`ng serve`
+
+Logo após acessar o seguinte endereço no broswer:
+`http://localhost:4200/`
+
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Para gerar um build com os artefatos basta executar o seguinte comando:
 
-## Running unit tests
+`ng build`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Os artefatos serão gerados no diretório `dist/`
 
-## Running end-to-end tests
+## Docker
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Para rodar a aplicação local de maneira fácil foi criado um arquivo docker-compose.yml na raiz do projeto.
 
-## Further help
+Para criar o container com a aplicação execute o seguinte comando:
+`docker compose up -d`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Para destruir o container criado anteriormente execute o seguinte comando:
+`docker compose down`
+
+### Para acessar a aplicação basta entrar no seguinte endereço: `http://localhost:7979/`
+
